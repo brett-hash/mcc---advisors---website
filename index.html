@@ -284,7 +284,7 @@ html<body>
 <button style="position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;background:var(--teal);color:var(--white);border-radius:50%;display:none;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(26,122,109,0.3);cursor:pointer;transition:all 180ms;z-index:999" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
 
 <script>
-window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('hidden'),600));
+setTimeout(()=>{const l=document.getElementById('loader');if(l)l.style.display='none'},100);
 function go(p){document.getElementById('ham').classList.remove('open');document.getElementById('mob').classList.remove('open');document.body.style.overflow='';document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));const t=document.getElementById('page-'+p);if(t){t.classList.add('active');document.querySelectorAll('.nav__link').forEach(l=>l.classList.toggle('active',l.dataset.p===p));window.scrollTo({top:0,behavior:'instant'});try{history.pushState({page:p},'',`#${p}`)}catch(e){console.log('History API unavailable')}}document.querySelectorAll('.mob-link').forEach(l=>l.onclick=()=>{go(l.dataset.p);document.getElementById('ham').classList.remove('open');document.getElementById('mob').classList.remove('open');document.body.style.overflow=''})}
 document.querySelectorAll('.nav__link').forEach(l=>l.onclick=()=>go(l.dataset.p));
 document.querySelectorAll('.mob-link').forEach(l=>l.onclick=()=>go(l.dataset.p));
