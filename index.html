@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCC Advisors - Legal Recruiting</title>
+<meta name="description" content="MCC Advisors — Premier legal recruiting and executive search. 200+ attorneys placed with 97% two-year retention across Am Law 200 firms and Fortune 500 legal departments.">
+<title>MCC Advisors — Legal Recruiting & Executive Search</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0F2A4A;--navy-dark:#091D35;--stone:#E8E0D4;--stone-light:#F2EDE5;--teal:#1A7A6D;--teal-light:#22957F;--teal-bright:#2BB89E;--white:#FAFAF7;--ink:#1C1C1E;--ink-light:#3A3A3C;--ink-muted:#8E8E93;--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-3xl:9rem;--max-width:1280px;--nav-h:110px;--ease:cubic-bezier(0.16,1,0.3,1);--dur:400ms}
+:root{--navy:#0F2A4A;--navy-dark:#091D35;--navy-light:#163560;--stone:#E8E0D4;--stone-light:#F2EDE5;--teal:#1A7A6D;--teal-light:#22957F;--teal-bright:#2BB89E;--white:#FAFAF7;--ink:#1C1C1E;--ink-light:#3A3A3C;--ink-muted:#8E8E93;--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',-apple-system,sans-serif;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-3xl:9rem;--max-width:1280px;--nav-h:110px;--ease:cubic-bezier(0.16,1,0.3,1);--dur:400ms}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--font-body);color:var(--ink);background:var(--white);line-height:1.65;overflow-x:hidden}
@@ -27,6 +28,7 @@ p{font-size:1rem;line-height:1.7;color:var(--ink-light)}
 .btn--primary:hover{background:var(--teal-light);transform:translateY(-2px)}
 .btn--ghost{color:var(--white);border:1.5px solid rgba(250,250,247,0.3)}
 .btn--ghost:hover{border-color:var(--white);background:rgba(250,250,247,0.06)}
+.btn--sm{padding:0.625rem 1.25rem;font-size:0.8125rem}
 .page{display:none}
 .page.active{display:block}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);display:flex;align-items:center;transition:all var(--dur)}
@@ -46,7 +48,7 @@ p{font-size:1rem;line-height:1.7;color:var(--ink-light)}
 .nav__mobile{display:none;position:fixed;inset:0;background:var(--navy-dark);z-index:999;flex-direction:column;padding:6rem 2rem;gap:1.5rem}
 .nav__mobile.open{display:flex}
 .mob-link{font-size:1.125rem;color:rgba(250,250,247,0.75);cursor:pointer;padding:0.75rem 0}
-@media(max-width:1024px){.nav__links,.nav__cta{display:none}.nav__ham{display:flex}}
+@media(max-width:1100px){.nav__links,.nav__cta{display:none}.nav__ham{display:flex}}
 .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(165deg,var(--navy-dark) 0%,var(--navy) 100%);position:relative;overflow:hidden}
 .hero__content{position:relative;z-index:10;max-width:820px;padding:calc(var(--nav-h) + 2rem) 1.5rem 4rem;margin:0 auto;text-align:center}
 .hero h1{color:var(--white);margin-bottom:var(--space-lg)}
@@ -66,17 +68,26 @@ p{font-size:1rem;line-height:1.7;color:var(--ink-light)}
 .contact-form{max-width:600px;margin:0 auto;background:var(--white);padding:var(--space-xl);border-radius:8px;box-shadow:0 4px 24px rgba(15,42,74,0.07)}
 .form-group{margin-bottom:var(--space-md)}
 .form-group label{display:block;font-weight:600;margin-bottom:0.5rem;color:var(--ink)}
-.form-group input,.form-group textarea{width:100%;padding:0.75rem;border:1.5px solid rgba(15,42,74,0.1);border-radius:4px;font-family:var(--font-body);font-size:1rem}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.75rem;border:1.5px solid rgba(15,42,74,0.1);border-radius:4px;font-family:var(--font-body);font-size:1rem}
 .form-group textarea{min-height:120px;resize:vertical}
 .form-submit{width:100%;padding:1rem;background:var(--teal);color:var(--white);font-weight:600;border-radius:4px;cursor:pointer;border:none}
 .form-submit:hover{background:var(--teal-light)}
+.value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-lg);margin-top:var(--space-xl)}
+.value-card{padding:var(--space-lg);background:var(--stone-light);border-radius:8px}
+.value-card h3{margin-bottom:var(--space-sm);color:var(--navy)}
+.faq-category{margin-bottom:var(--space-xl)}
+.faq-category h3{margin-bottom:var(--space-md);color:var(--navy)}
+.faq-item{border-bottom:1px solid rgba(15,42,74,0.1);padding:var(--space-md) 0}
+.faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;color:var(--navy)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding-top:0}
+.faq-answer.open{max-height:500px;padding-top:var(--space-sm)}
 footer{background:var(--navy-dark);color:rgba(250,250,247,0.5);padding:var(--space-xl) 0 var(--space-lg)}
 footer a{cursor:pointer;transition:color 0.2s}
 footer a:hover{color:var(--white)}
 </style>
 </head>
 <body>
-<nav class="nav" id="nav">
+  <nav class="nav" id="nav">
 <div class="nav__inner">
 <div class="nav__logo" onclick="go('home')">
 <div class="nav__mark">M</div>
@@ -85,8 +96,13 @@ footer a:hover{color:var(--white)}
 <ul class="nav__links">
 <li class="nav__link active" data-p="home">Home</li>
 <li class="nav__link" data-p="about">About</li>
+<li class="nav__link" data-p="how-it-works">How It Works</li>
+<li class="nav__link" data-p="employers">Employers</li>
+<li class="nav__link" data-p="candidates">Candidates</li>
 <li class="nav__link" data-p="practices">Practices</li>
 <li class="nav__link" data-p="jobs">Jobs</li>
+<li class="nav__link" data-p="insights">Insights</li>
+<li class="nav__link" data-p="faq">FAQ</li>
 <li class="nav__link" data-p="contact">Contact</li>
 </ul>
 <div class="nav__cta" onclick="go('contact')">Get Started</div>
@@ -98,10 +114,16 @@ footer a:hover{color:var(--white)}
 <div class="nav__mobile" id="mob">
 <div class="mob-link" data-p="home">Home</div>
 <div class="mob-link" data-p="about">About</div>
+<div class="mob-link" data-p="how-it-works">How It Works</div>
+<div class="mob-link" data-p="employers">For Employers</div>
+<div class="mob-link" data-p="candidates">For Candidates</div>
 <div class="mob-link" data-p="practices">Practices</div>
 <div class="mob-link" data-p="jobs">Jobs</div>
+<div class="mob-link" data-p="insights">Insights</div>
+<div class="mob-link" data-p="faq">FAQ</div>
 <div class="mob-link" data-p="contact">Contact</div>
 </div>
+
 <main class="page active" id="page-home">
 <section class="hero">
 <div class="hero__content">
@@ -129,10 +151,79 @@ footer a:hover{color:var(--white)}
 </div>
 </section>
 </main>
+
 <main class="page" id="page-about">
 <header class="pg-header"><div class="container"><h1>About MCC Advisors</h1><p>Premier legal recruiting firm specializing in attorney placement and executive search across all practice areas.</p></div></header>
-<section class="section"><div class="container"><h2>Who We Are</h2><p style="margin-top:var(--space-md);max-width:800px">Founded in 2023, MCC Advisors has quickly become a trusted partner for law firms and legal departments seeking top-tier talent. Our deep understanding of the legal market and extensive network allows us to connect exceptional attorneys with opportunities that align with their career goals.</p></div></section>
+<section class="section"><div class="container">
+<h2>Who We Are</h2>
+<p style="margin-top:var(--space-md);max-width:800px">Founded in 2023, MCC Advisors has quickly become a trusted partner for law firms and legal departments seeking top-tier talent. Our deep understanding of the legal market and extensive network allows us to connect exceptional attorneys with opportunities that align with their career goals.</p>
+<div class="value-grid">
+<div class="value-card"><h3>Market Intelligence</h3><p>We know who's moving before the market does. Our network keeps us ahead of trends and emerging opportunities.</p></div>
+<div class="value-card"><h3>Confidential Process</h3><p>Your search remains completely confidential. We protect both employer and candidate privacy throughout.</p></div>
+<div class="value-card"><h3>Quality Over Quantity</h3><p>We focus on perfect-fit placements, not volume. Our 97% retention rate proves our selective approach works.</p></div>
+<div class="value-card"><h3>Long-Term Relationships</h3><p>We're not transactional recruiters. We build lasting partnerships with firms and candidates alike.</p></div>
+</div>
+</div></section>
 </main>
+
+<main class="page" id="page-how-it-works">
+<header class="pg-header"><div class="container"><h1>How It Works</h1><p>Our proven process for successful attorney placements</p></div></header>
+<section class="section"><div class="container">
+<h2 style="margin-bottom:var(--space-xl)">For Employers</h2>
+<div class="value-grid">
+<div class="value-card"><h3>1. Discovery</h3><p>We learn about your firm, culture, practice needs, and ideal candidate profile.</p></div>
+<div class="value-card"><h3>2. Targeted Search</h3><p>We leverage our network to identify attorneys who match your specific requirements.</p></div>
+<div class="value-card"><h3>3. Vetting</h3><p>We conduct thorough screening and confidential conversations before presenting candidates.</p></div>
+<div class="value-card"><h3>4. Presentation</h3><p>You receive detailed candidate profiles with our insights and recommendations.</p></div>
+<div class="value-card"><h3>5. Coordination</h3><p>We manage the interview process, feedback, and negotiations discreetly.</p></div>
+<div class="value-card"><h3>6. Integration</h3><p>We support the transition and follow up to ensure long-term success.</p></div>
+</div>
+<h2 style="margin-top:var(--space-3xl);margin-bottom:var(--space-xl)">For Candidates</h2>
+<div class="value-grid">
+<div class="value-card"><h3>1. Consultation</h3><p>Confidential conversation about your goals, practice, and ideal next move.</p></div>
+<div class="value-card"><h3>2. Market Analysis</h3><p>We share insights on opportunities, compensation, and timing for your move.</p></div>
+<div class="value-card"><h3>3. Opportunity Matching</h3><p>We identify roles that align with your career objectives and practice style.</p></div>
+<div class="value-card"><h3>4. Preparation</h3><p>We prepare you for interviews with firm-specific insights and guidance.</p></div>
+<div class="value-card"><h3>5. Negotiation</h3><p>We advocate for your interests in compensation and terms discussions.</p></div>
+<div class="value-card"><h3>6. Transition Support</h3><p>We help ensure a smooth start and remain available as you settle in.</p></div>
+</div>
+</div></section>
+</main>
+
+<main class="page" id="page-employers">
+<header class="pg-header"><div class="container"><h1>For Employers</h1><p>Strategic lateral hiring for law firms and legal departments</p></div></header>
+<section class="section"><div class="container">
+<h2>Why Leading Firms Choose MCC</h2>
+<p style="margin-top:var(--space-md);max-width:800px">We understand that lateral hiring is about more than filling seats—it's about strategic growth, cultural fit, and long-term success. Our selective approach and deep market knowledge help you build the practice you envision.</p>
+<div class="value-grid" style="margin-top:var(--space-xl)">
+<div class="value-card"><h3>Pre-Vetted Talent</h3><p>We only present attorneys who meet your criteria and are genuinely interested in your opportunity.</p></div>
+<div class="value-card"><h3>Market Intelligence</h3><p>Access insights on compensation trends, competitor moves, and emerging talent.</p></div>
+<div class="value-card"><h3>Confidential Searches</h3><p>Your hiring needs remain private until you're ready to engage candidates.</p></div>
+<div class="value-card"><h3>Time Savings</h3><p>We handle sourcing, screening, and coordination so you focus on final decisions.</p></div>
+</div>
+<div style="text-align:center;margin-top:var(--space-3xl)">
+<a class="btn btn--primary" onclick="go('contact')">Discuss Your Hiring Needs →</a>
+</div>
+</div></section>
+</main>
+
+<main class="page" id="page-candidates">
+<header class="pg-header"><div class="container"><h1>For Candidates</h1><p>Confidential career guidance for attorneys at all levels</p></div></header>
+<section class="section"><div class="container">
+<h2>Your Career. Your Terms. Our Network.</h2>
+<p style="margin-top:var(--space-md);max-width:800px">Whether you're considering your next move or just want to understand your market value, we provide confidential counsel and access to opportunities you won't find posted publicly.</p>
+<div class="value-grid" style="margin-top:var(--space-xl)">
+<div class="value-card"><h3>Confidential Conversations</h3><p>Your current firm will never know you're exploring unless you want them to.</p></div>
+<div class="value-card"><h3>Market Insights</h3><p>Learn what firms are hiring, what they're paying, and where you'd be competitive.</p></div>
+<div class="value-card"><h3>Hidden Opportunities</h3><p>Access positions that never get posted—our relationships open doors.</p></div>
+<div class="value-card"><h3>No Cost To You</h3><p>Our services are completely free for candidates. Firms pay our fees.</p></div>
+</div>
+<div style="text-align:center;margin-top:var(--space-3xl)">
+<a class="btn btn--primary" onclick="go('contact')">Start a Confidential Conversation →</a>
+</div>
+</div></section>
+</main>
+
 <main class="page" id="page-practices">
 <header class="pg-header"><div class="container"><h1>Practice Areas</h1><p>We recruit across all legal specializations</p></div></header>
 <section class="section"><div class="container"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-md)">
@@ -147,27 +238,104 @@ footer a:hover{color:var(--white)}
 <div style="padding:var(--space-md);border:1px solid rgba(15,42,74,0.1);border-radius:8px;background:linear-gradient(135deg,var(--teal) 0%,var(--navy) 100%);color:var(--white)"><h3 style="color:var(--white)">All Other Practice Areas</h3><p style="margin-top:0.5rem;color:rgba(255,255,255,0.9)">Tax, Environmental, Bankruptcy, Privacy—if you practice law, we place you</p></div>
 </div></div></section>
 </main>
+
 <main class="page" id="page-jobs">
 <header class="pg-header"><div class="container"><h1>Current Opportunities</h1><p>Explore our latest attorney placements</p></div></header>
-<section class="section"><div class="container"><p style="text-align:center;color:var(--ink-muted)">Job listings will be updated regularly. Contact us to learn about current opportunities.</p><div style="text-align:center;margin-top:var(--space-lg)"><a class="btn btn--primary" onclick="go('contact')">Contact Us About Opportunities →</a></div></div></section>
+<section class="section"><div class="container">
+<p style="text-align:center;color:var(--ink-muted)">Job listings will be updated regularly. Contact us to learn about current opportunities that match your background.</p>
+<div style="text-align:center;margin-top:var(--space-lg)">
+<a class="btn btn--primary" onclick="go('contact')">Inquire About Opportunities →</a>
+</div>
+</div></section>
 </main>
+
+<main class="page" id="page-insights">
+<header class="pg-header"><div class="container"><h1>Insights</h1><p>Legal market trends and recruiting intelligence</p></div></header>
+<section class="section"><div class="container">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--space-lg)">
+<div style="padding:var(--space-lg);border:1px solid rgba(15,42,74,0.1);border-radius:8px">
+<h3>Lateral Market Trends</h3>
+<p style="margin-top:var(--space-sm);color:var(--ink-muted);font-size:0.875rem">Stay informed about compensation trends, practice area demand, and market dynamics affecting attorney mobility.</p>
+</div>
+<div style="padding:var(--space-lg);border:1px solid rgba(15,42,74,0.1);border-radius:8px">
+<h3>Career Strategy</h3>
+<p style="margin-top:var(--space-sm);color:var(--ink-muted);font-size:0.875rem">Guidance on timing your move, evaluating opportunities, and negotiating offers in today's legal market.</p>
+</div>
+<div style="padding:var(--space-lg);border:1px solid rgba(15,42,74,0.1);border-radius:8px">
+<h3>Hiring Best Practices</h3>
+<p style="margin-top:var(--space-sm);color:var(--ink-muted);font-size:0.875rem">Strategic insights for firms on lateral integration, compensation structures, and competitive positioning.</p>
+</div>
+</div>
+<p style="text-align:center;margin-top:var(--space-xl);color:var(--ink-muted)">Contact us for detailed market intelligence specific to your practice area or region.</p>
+</div></section>
+</main>
+
+<main class="page" id="page-faq">
+<header class="pg-header"><div class="container"><h1>Frequently Asked Questions</h1><p>Common questions from employers and candidates</p></div></header>
+<section class="section"><div class="container" style="max-width:900px">
+<div class="faq-category">
+<h3>For Employers</h3>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">What are your fees? <span>+</span></div>
+<div class="faq-answer"><p>Our contingency-based fees are competitive with industry standards and align our success with yours. We're happy to discuss our fee structure in detail during an initial consultation.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">How long does a typical search take? <span>+</span></div>
+<div class="faq-answer"><p>Timeline varies based on practice area and seniority. Most searches conclude within 8-12 weeks from engagement to acceptance, though we can move faster for urgent needs.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">Do you offer guarantees? <span>+</span></div>
+<div class="faq-answer"><p>Yes. We stand behind our placements with replacement guarantees. Specific terms are outlined in our engagement agreement.</p></div>
+</div>
+</div>
+<div class="faq-category">
+<h3>For Candidates</h3>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">Do I pay for your services? <span>+</span></div>
+<div class="faq-answer"><p>No. Our services are completely free for candidates. Hiring firms pay our fees.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">How do you maintain confidentiality? <span>+</span></div>
+<div class="faq-answer"><p>We never share your information without explicit permission. Your current employer will not be contacted, and we discuss opportunities only when you're comfortable proceeding.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">I'm happy where I am. Should I still talk to you? <span>+</span></div>
+<div class="faq-answer"><p>Absolutely. Many of our best placements come from attorneys who weren't actively looking but were open to the right opportunity. A confidential conversation costs nothing and might reveal options worth considering.</p></div>
+</div>
+</div>
+<div class="faq-category">
+<h3>About MCC</h3>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">What makes MCC different? <span>+</span></div>
+<div class="faq-answer"><p>We focus on quality over volume, maintain deep market intelligence, and build long-term relationships rather than transactional placements. Our 97% retention rate reflects this approach.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">Do you work nationally? <span>+</span></div>
+<div class="faq-answer"><p>Yes. While based in Sioux Falls, SD, we place attorneys nationwide and have relationships with firms in all major legal markets.</p></div>
+</div>
+</div>
+</div></section>
+</main>
+
 <main class="page" id="page-contact">
 <header class="pg-header"><div class="container"><h1>Get In Touch</h1><p>Let's discuss your legal recruiting needs</p></div></header>
 <section class="section"><div class="container">
-<form class="contact-form" onsubmit="alert('Form submitted! (Connect to your email service)');return false">
-<div class="form-group"><label>Name</label><input type="text" required placeholder="Your name"></div>
-<div class="form-group"><label>Email</label><input type="email" required placeholder="your@email.com"></div>
+<form class="contact-form" onsubmit="alert('Thank you! We will be in touch soon. (Connect this form to your email service)');return false">
+<div class="form-group"><label>Name *</label><input type="text" required placeholder="Your name"></div>
+<div class="form-group"><label>Email *</label><input type="email" required placeholder="your@email.com"></div>
 <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 123-4567"></div>
-<div class="form-group"><label>Message</label><textarea required placeholder="Tell us about your needs..."></textarea></div>
+<div class="form-group"><label>I am a: *</label><select required><option value="">Select...</option><option>Law Firm / Employer</option><option>Attorney / Candidate</option><option>Other</option></select></div>
+<div class="form-group"><label>Message *</label><textarea required placeholder="Tell us about your needs or interests..."></textarea></div>
 <button type="submit" class="form-submit">Send Message</button>
 </form>
-<div style="text-align:center;margin-top:var(--space-xl)">
+<div style="text-align:center;margin-top:var(--space-3xl)">
 <p><strong>Email:</strong> info@themccway.com</p>
 <p style="margin-top:0.5rem"><strong>Phone:</strong> (605) 555-0123</p>
 <p style="margin-top:0.5rem"><strong>Location:</strong> Sioux Falls, SD</p>
 </div>
 </div></section>
 </main>
+
 <footer>
 <div class="container">
 <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin-bottom:var(--space-lg)">
@@ -175,8 +343,13 @@ footer a:hover{color:var(--white)}
 <div style="display:flex;flex-wrap:wrap;gap:1.5rem">
 <a onclick="go('home')">Home</a>
 <a onclick="go('about')">About</a>
+<a onclick="go('how-it-works')">How It Works</a>
+<a onclick="go('employers')">Employers</a>
+<a onclick="go('candidates')">Candidates</a>
 <a onclick="go('practices')">Practices</a>
 <a onclick="go('jobs')">Jobs</a>
+<a onclick="go('insights')">Insights</a>
+<a onclick="go('faq')">FAQ</a>
 <a onclick="go('contact')">Contact</a>
 </div>
 </div>
@@ -186,7 +359,18 @@ footer a:hover{color:var(--white)}
 </div>
 </footer>
 <script>
-function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));const t=document.getElementById('page-'+p);if(t){t.classList.add('active');document.querySelectorAll('.nav__link').forEach(l=>l.classList.toggle('active',l.dataset.p===p));document.querySelectorAll('.mob-link').forEach(l=>l.classList.toggle('active',l.dataset.p===p));window.scrollTo({top:0,behavior:'instant'});document.getElementById('ham').classList.remove('open');document.getElementById('mob').classList.remove('open')}}
+function go(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  const t=document.getElementById('page-'+p);
+  if(t){
+    t.classList.add('active');
+    document.querySelectorAll('.nav__link').forEach(l=>l.classList.toggle('active',l.dataset.p===p));
+    document.querySelectorAll('.mob-link').forEach(l=>l.classList.toggle('active',l.dataset.p===p));
+    window.scrollTo({top:0,behavior:'instant'});
+    document.getElementById('ham').classList.remove('open');
+    document.getElementById('mob').classList.remove('open');
+  }
+}
 document.querySelectorAll('.nav__link').forEach(l=>l.onclick=()=>go(l.dataset.p));
 document.querySelectorAll('.mob-link').forEach(l=>l.onclick=()=>go(l.dataset.p));
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
